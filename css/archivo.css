@@ -118,9 +118,7 @@ nav{
 
 .frontpage1 .botonprod{
     position: relative /* o absolute*/;
-    bottom: 15%;
-    left:45%;
-    width:150px;
+    width:200px;
     z-index: 99;
     font-family:'Cinzel', serif;
     text-decoration: none;
@@ -131,6 +129,10 @@ nav{
     display: flex;
     flex-direction: row;
     align-self: center;
+    top: 250px;
+    right: 40%;
+    left: 40%;
+    
 }
 .botonprod a{
     /*display:flex;
@@ -138,9 +140,10 @@ nav{
     text-decoration: none;
     color: black;
     font-weight: bolder;
-    /* padding: 10px;
-    flex-wrap: wrap;
+    padding: 10px;
+    /* flex-wrap: wrap;
     position: static;*/
+    text-align: center;
 
 }
 .botonprod:hover{
@@ -514,10 +517,12 @@ h2{
         box-sizing: border-box;
         margin: 0%;
         font-size: smaller;
+        padding: 10px;
 }
    .ubicacion{
         display: flex;
         margin: 0%;
+        padding: 10px;
    }
    .misprod{
         margin: 0%;
