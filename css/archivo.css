@@ -276,7 +276,18 @@ footer{
     grid-area: newsletter;
     
 }
+.newsletter button{
+    background-color: blanchedalmond;
+    color: black;
+    border: #70995E;
 
+}
+.newsletter button:hover{
+    background-color: #70995E;
+    border: #8C8C8C;
+    height: 16px;
+    width: 20px;
+}
 .social-bar{
     grid-area: social-bar;
     display: flex;
@@ -368,8 +379,12 @@ h2{
     font-family: 'Cinzel', serif;
     
 }
-.selcantidad{
+.agregar_carrito button{
+    background-color: #70995E;
+}
     
+.agregar_carrito button:hover{
+    color: #70995E;
 }
 /*fin css de productos perse*/
 .pagecontacto h2{
