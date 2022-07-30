@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Cinzel&display=swap');
+
+*{
+    margin: 0; 
+    padding: 0; 
+    /*border-style: dashed;*/
+    font-family: 'Cinzel', serif;
+    
+} 
+
+
+html {
+    height: 100%;
+   
+}
+body {
+    min-height: 100%;
+}
+
+body{
+    background-color: rgb(249, 248, 243);
+    margin: 0;
+    padding: 0;
+    /*min-height: 100vh;*/
+    /*position: relative;*/
+
+}
+input{
+    border-radius: 16px;
+
+}
+#main{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "nav" "frontpage1" "frontpage2" "footer";
+    min-height: 100vh;
+    
+    
+}
+header{
+    grid-area: header;
+    background-image: url(../Imagenes/Fondo\ Header.jpg);
+    background-size: cover;
+    height: 100px;
+    overflow: hidden;
+
+}
+
+header a{
+    text-decoration: none;
+
+}
+header h1{
+    color: white;
+    text-shadow: 2px 2px 2px #8C8C8C;
+    font-size: 30px;  
+    font-style: italic; 
+    text-align: center;
+    padding-top: 25px;
+    /*margin: auto;*/
+}
+
+nav{
+    grid-area: nav;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    list-style: none;
+    font-family: 'Cinzel', serif;
+    font-weight: 90px;
+    font-weight: bolder;
+    background-color: antiquewhite;
+    
+}
+.menu a{
+    color:#77a464;
+    font-weight: lighter;
+    text-decoration: none;
+    list-style: none;
+}
+.menu a:hover{
+    color: #70995E;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px lightslategrey;    
+}
+ .mostrar-menu,
+ .esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+ }
+ .mostrar-menu{
+    order: 1;
+ }
+ #check{
+    display: none;
+ }
+    
+
+ .frontpage1{
+    grid-area: frontpage1;
+    /*display: flex;
+    justify-content: center;*/
+    /*padding: 10px;*/
+    align-self: center;    
+    /*position: absolute;*/
+    margin: 2% 15%;
+    opacity: 60%;
+    
+ }
+
+.frontpage1 .botonprod{
+    position: relative /* o absolute*/;
+    bottom: 15%;
+    left:45%;
+    width:150px;
+    z-index: 99;
+    font-family:'Cinzel', serif;
+    text-decoration: none;
+    /*background-color:bisque;*/
+    border: none;
+    background-color: rgba(245, 235, 224, 0.62);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+.botonprod a{
+    /*display:flex;
+    flex-direction: row;*/
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    /* padding: 10px;
+    flex-wrap: wrap;
+    position: static;*/
+
+}
+.botonprod:hover{
+    color: grey;
+    font-size: 16px;
+}
+
+    .frontpage2{
+    grid-area: frontpage2;
+}
+.frontpage2 ul{
+    list-style: none;
+}
+.frontpage2 h2{
+    text-align: center;
+    padding: 16px;
+    
+} 
+.misprod{
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px lightslategrey;
+    color: #77a464;
+    overflow:hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr .5fr .5fr; 
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    
+}
+.misprod img{
+    border-radius: 20%;
+    display: block;
+    margin: auto;
+}
+.misprod div img:hover{
+    -webkit-transform:scale(1.3);transform:scale(1.3);
+}
+.misprod div{
+    display: block;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px lightslategrey; 
+    display: grid;
+    margin: 20px;
+}
+.misprod a{
+    text-decoration: none;
+    /*height: 10px;*/
+    color: #77a464;
+}
+.misprod h5, .misprod h6{
+    text-align: center;
+  
+}
+.frontpage3{
+    grid-area: frontpage3;
+    height: 90%;
+    font-family: 'Cinzel', serif;
+    margin-left: 5%;
+    margin-right: 5%; 
+    /*display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .2fr .3fr;
+    grid-template-areas: "titulo titulo" "disenador parrafo" "disenador boton";
+    gap: .5%;*/
+    
+}
+.disenadora{
+    display: flex;
+}
+.frontpage3 img{
+    grid-area: disenador;
+    height: 80%;
+    border-radius: 5%;
+    object-fit: cover;
+}
+.frontpage3 p{
+    grid-area: parrafo;
+    font-family:'Cinzel', serif;
+    font-size: smaller;
+    margin: 5%;
+}
+.frontpage3 h2{
+    grid-area: titulo;
+    text-align: center;
+    height: 10%;
+}
+
+.boton{
+    grid-area: boton;
+    border: 3px solid antiquewhite;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    color: #77a464;
+    border: 3px solid rgb(245, 225, 198);  
+    display: inline;
+    align-self: center;
+    margin: 5%;
+}
+.parrafo a{
+    text-decoration: none;
+    font-family:'Cinzel', serif;
+    color: grey;
+    font-size: larger;
+  
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url(../Imagenes/Fondo\ Header.jpg);
+    background-size: cover;
+    overflow: hidden;
+    
+}
+.newsletter{
+    /*display: flex;*/
+    border: none;    
+    /*flex-direction: column;*/
+    grid-area: newsletter;
+    font-size: small;
+}
+.newsletter{
+    border: none;
+    grid-area: newsletter;
+    
+}
+
+.social-bar{
+    grid-area: social-bar;
+    display: flex;
+    
+    
+}
+.social-bar li {
+    display: inline-block;
+    width: auto;
+    
+}
+.social-bar li img{
+    width: 30px;
+    height: 30px;
+    border-radius: 30%;
+    display: flex;
+    margin: 1rem;
+}
+
+.contactanos{
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+}
+footer div a{
+    text-decoration: none; 
+    color: black;
+} 
+footer div a:hover{
+    color: blueviolet;
+} 
+.contactanos{
+    grid-area: contactanos;
+    text-align: center;
+}
+.contactanos,
+.social-bar,
+.newsletter{
+    align-self: center;
+    margin: 2rem;
+}
+h2{
+    font-family:'Cinzel', serif;
+    font-style:oblique;
+    color: #77a464;
+    text-align: center;
+    text-shadow: 1px 1px 1px lightslategrey;
+}
+
+
+/*ARMADO CSS DE PRODUCTOS PERSE*/
+
+.detalleprod{
+    font-family: cursive;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2 auto);
+    gap: 2rem;
+}
+
+.descripcion{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    grid-column-start: 2 ;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end:  2;
+}
+.imgfrutosrojos{
+    grid-column-start: 1 ;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end:  3;
+    object-fit: cover;
+}
+ 
+.selcantidad{
+    grid-area: selcantidad;
+    grid-column-start: 2 ;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end:  3;
+    
+
+}
+.descripcion h3{
+    margin: 2rem;
+    font-family: 'Cinzel', serif;
+    
+}
+.selcantidad{
+    
+}
+/*fin css de productos perse*/
+.pagecontacto h2{
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50% 50%;
+    row-gap: 16px;
+}
+.contacto{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content:center; 
+    margin-bottom: 5px;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px lightslategrey;
+}
+.ubicacion{
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 1px lightslategrey;
+    margin-bottom: 25px;
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center; 
+    object-fit: cover;
+    object-fit: fill;
+}
+.ubicacion iframe{
+    width: auto;
+    height: 22rem;
+}
+
+/*quienes somos*/
+
+.quienessomos h2,
+.quienessomos p{
+    padding: 16px;
+}
+.quienessomos{
+    display: grid;
+    grid-template-rows: 5% 14% auto;
+    margin-bottom: 5%;
+    
+}
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 300px;
+    padding: 20px;
+    gap: 10px;
+}
+.gallery__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+
+.gallery__item:first-child{
+    grid-row-start: span 2;
+}
+.gallery__item:nth-child(3){
+    grid-row-start: span 2;
+}
+.gallery__item:nth-child(5){
+    grid-row-start: span 2;
+} 
+.gallery__item:nth-child(4){
+    grid-row-start: span 2;
+} 
+.gallery__item:nth-child(2), 
+.gallery__item:nth-child(6){
+    opacity: 50%;
+} 
+
+/*:hover{
+    -webkit-transform:scale(1.2);transform:scale(1.2);
+}*/
+.quienessomos p{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 5%;
+
+}
+
+@media (max-width: 320px) {
+    /*nav {
+      display: none;
+    }*/
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .social-bar{
+        display: flex;
+        margin: 0%;
+    }
+    .frontpage1 .botonprod{
+        display: none;
+    }
+    .slider img{
+        width: 80%;
+        height: 10%;
+        margin-left: 10%;
+        object-fit: cover;
+    }
+    .quienessomos p{
+        font-size: 8px;
+        margin-top: 0;
+        padding: 0;
+        height:max-content;
+    }
+    .quienessomos h2{
+        height: 16px;
+    }
+   .gallery-container{
+    display: flex;
+    display: block;
+    margin-top: 16px;
+   }
+   .gallery__item:nth-child(2),
+   .gallery__item:nth-child(6){
+        display: none;
+   }
+   .gallery__item img{
+        border-radius: 16px;
+   }
+   .gallery__item img:hover{
+        -webkit-transform:scale(1.3);transform:scale(1.3);
+    }
+   .social-bar{
+        margin: 0;
+        padding: 0;
+        align-items: center;
+   }
+   .contacto{
+        display: flex;
+        box-sizing: border-box;
+        margin: 0%;
+        font-size: smaller;
+}
+   .ubicacion{
+        display: flex;
+        margin: 0%;
+   }
+   .misprod{
+        margin: 0%;
+   }
+   .imgfrutosrojos img{
+        width: auto;
+        height: 160px;
+   }
+   .detalleprod{
+    display: block;
+   }
+   .descripcion{
+    font-size: 10px;
+   }
+  
+   .mostrar-menu,
+   .esconder-menu{
+    display: block;
+   }
+   .mostrar-menu{
+        margin-left: 50%;
+   }
+   .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: bisque;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 100px 0px;
+    z-index: 100;
+    transition: 0.8s;
+   }
+   .menu {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+   }
+   .esconder-menu{
+    position: absolute;
+    top: 1px;
+    right: 20px;
+   }
+   #check:checked ~ .menu{
+    right: 0;
+   }
+}
+
+@media (min-with: 321px) and (max-width: 768px) {
+    .misprod{
+        margin: 0%;
+   }
+   .detallejabon{
+        display: block;
+        flex-direction: column;
+   }
+   .detallejabon h2{
+        margin-top: 16px;
+   }
+   .imgfrutosrojos img{
+        width: auto;
+        height: auto;
+        margin-left: 5%;
+        border-radius: 16px;
+   }
+   .detalleprod{
+    display: block;
+   }
+   .descripcion{
+    font-size: 12px;
+   }
+   .selcantidad,
+   .cantidad,
+   .agregar_carrito{
+    color: #70995E;
+    font-size: 10px;
+    margin-left: 25%;
+    display: flex;
+   }
+   .quienessomos p{
+    font-size: 12px;
+   }
+
+}
